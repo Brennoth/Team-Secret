@@ -26,11 +26,15 @@ body {
 
 /* --- HEADER --- */
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4rem;
-  background-color: #0b111e;
+  /* background-color: #0b111e; */
+  background-color: transparent;
+  backdrop-filter: blur(0.5rem);
   border-bottom: 1px solid #1e293b;
 }
 
