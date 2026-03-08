@@ -43,10 +43,13 @@
                     const equipes = seasons[nomeSeason]
 
                     equipes.forEach((valor, index) => {
-                    
-                        if (!valor.equipe) return
+                        if (!valor.equipe) {
+                            const spanData = document.querySelector("#data")
+                            spanData.innerHTML = valor.data
+                            return
+                        }
+                        new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, valor.data, nomeSeason)
 
-                        new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, valor.data)
                     });
 
                 }
@@ -60,7 +63,7 @@
     
 
     class Equipe{
-            constructor(posição, equipe, quedas, abate, booyah, pts, data) {
+            constructor(posição, equipe, quedas, abate, booyah, pts, data, season) {
                 this.posição = posição
                 this.equipe = equipe
                 this.quedas = quedas
@@ -68,9 +71,11 @@
                 this.booyah = booyah
                 this.pts = pts
                 this.data = data
+                this.season = season
                 const tbody = document.querySelector("#tbody")
                 this.criarTr(tbody)
                 this.mudarData(data) 
+                this.mudarNomeSeason(season)
             }
             criarTr(tbody) {
                 const createTr = document.createElement("tr")
@@ -131,6 +136,10 @@
             mudarData(data) {
                 const spanData = document.querySelector("#data")
                 spanData.innerHTML = `${data}`
+            }
+            mudarNomeSeason(nomeSeason) {
+                const season = document.querySelector("#rankingSeason")
+                season.innerHTML = `SEASON ${nomeSeason.slice(-1)}`
             }
 
     }   
