@@ -128,10 +128,8 @@ body {
 }
 
 .table_header span {
-  display: block;
   color: #93C5FD;
   font-size: 1.2rem;
-  margin-top: 0.5rem;
   font-weight: bold;
 }
 
