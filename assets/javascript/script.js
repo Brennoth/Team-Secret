@@ -1,3 +1,5 @@
+
+
 (function () {
     const seasons = {
         season1: [
@@ -22,46 +24,33 @@
         ]
     }
 
-
-
-    const mudarSeason = {
-        start() {
-            const select = document.querySelector(".container_select")
-            select.addEventListener("change", function() {
-                const seasonEscolhida = this.value
-                mudarSeason.carregarSeason(seasonEscolhida)
-            })
-        },
-        carregarSeason(nomeSeason){
-            const tbody = document.querySelector("#tbody")
-            tbody.innerHTML = ""
-
-            for (let season in seasons) {
-            
-                if (nomeSeason == season) {
-
-                    const equipes = seasons[nomeSeason]
-
-                    equipes.forEach((valor, index) => {
-                        if (!valor.equipe) {
-                            const spanData = document.querySelector("#data")
-                            spanData.innerHTML = valor.data
-                            return
-                        }
-                        new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, valor.data, nomeSeason)
-
-                    });
-
-                }
-            }
-        }
-        
+    const jogadores = {
+        season1: [
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            { jogador: "bn.op", kill: 20, equipe: "Trem Bala" },
+            {jogador: "bn.op", kill: 20, equipe: "Trem Bala"},
+        ],
+        season2: [
+            {jogador: "nickAleatorio", kill: 5, equipe: "flamengo" },
+            {jogador: "nickAleatorio", kill: 10, equipe: "vasco"},
+        ]
     }
-    mudarSeason.start()
-   
-
     
-
+    /*cria o tbody*/
     class Equipe{
             constructor(posição, equipe, quedas, abate, booyah, pts, data, season) {
                 this.posição = posição
@@ -143,6 +132,130 @@
             }
 
     }   
+    
+
+    class Jogador{
+        constructor(posição, nomeJogador, equipe) {
+            this.posição = posição
+            this.nomeJogador = nomeJogador
+            this.equipe = equipe
+        }
+    }
+    const criarRankJogador = {
+        start(posicao, nomeJogador, kill, equipe) {
+            this.criaContainerJogador(posicao, nomeJogador, kill, equipe)
+        },
+        criaContainerJogador(posicao, nomeJogador, kill, equipe) {
+            const top_kills_grid = document.querySelector(".top_kills_grid")
+            const containerJogador = document.createElement("div")
+            containerJogador.setAttribute("class", "kill_card")
+            if (posicao == 1) {
+                containerJogador.setAttribute("class", "kill_card rank-1")
+            } if (posicao == 2) {
+                containerJogador.setAttribute("class", "kill_card rank-2")
+            } if (posicao == 3) {
+                containerJogador.setAttribute("class", "kill_card rank-3")
+            }
+            top_kills_grid.appendChild(containerJogador)
+            this.criaPosição(containerJogador, posicao, nomeJogador, kill, equipe)
+        },
+        criaPosição(containerJogador, posicao, nomeJogador, kill, equipe) {
+            const p = document.createElement("p")
+            p.setAttribute("class", "badge")
+            p.textContent = posicao
+            containerJogador.appendChild(p)
+            this.criarNomeEquipe(containerJogador, posicao, nomeJogador, kill, equipe)
+        },
+        criarNomeEquipe(containerJogador, posicao, nomeJogador, kill, equipe){
+            const divPlayerInfo = document.createElement("div")
+            divPlayerInfo.setAttribute("class", "player_info")
+            containerJogador.appendChild(divPlayerInfo)
+
+
+            const nick = document.createElement("h4")
+            nick.textContent = nomeJogador
+            divPlayerInfo.appendChild(nick)
+
+            const nomeEquipe = document.createElement("p")
+            nomeEquipe.textContent = equipe
+            divPlayerInfo.appendChild(nomeEquipe)
+
+            this.criarKill(containerJogador, posicao, nomeJogador, kill, equipe)
+        },
+        criarKill(containerJogador, posicao, nomeJogador, kill, equipe) {
+            const divKill = document.createElement("div")
+            divKill.setAttribute("class", "kill_stats")
+            containerJogador.appendChild(divKill)
+
+
+            const nomeKills = document.createElement("span")
+            nomeKills.setAttribute("class", "lbl")
+            nomeKills.textContent = "Kills"
+            divKill.appendChild(nomeKills)
+
+            const kills = document.createElement("span")
+            kills.setAttribute("class", "num")
+            kills.textContent = kill
+            divKill.appendChild(kills)
+        }
+    }
+    // criarRankJogador.start()
+
+
+    /*chama as fuções quando muda la no select*/
+    const mudarSeason = {
+        start() {
+            const select = document.querySelector(".container_select")
+            select.addEventListener("change", function() {
+                const seasonEscolhida = this.value
+                mudarSeason.carregarSeason(seasonEscolhida)
+                mudarSeason.carregarRankJogador(seasonEscolhida)
+            })
+        },
+        carregarSeason(nomeSeason){
+            const tbody = document.querySelector("#tbody")
+            tbody.innerHTML = ""
+
+            for (let season in seasons) {
+            
+                if (nomeSeason == season) {
+
+                    const equipes = seasons[nomeSeason]
+
+                    equipes.forEach((valor, index) => {
+                        if (!valor.equipe) {
+                            const spanData = document.querySelector("#data")
+                            spanData.innerHTML = valor.data
+                            return
+                        }
+                        new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, valor.data, nomeSeason)
+
+                    });
+
+                }
+            }
+        },
+        carregarRankJogador(nomeSeason) {
+            const top_kills_grid = document.querySelector(".top_kills_grid")
+            top_kills_grid.innerHTML = ""
+
+            for (let season in jogadores) {
+                if (nomeSeason == season) {
+                    const objJogadores = jogadores[nomeSeason]
+
+                    objJogadores.forEach((valor, index) => {
+                        new Jogador(index + 1, valor.jogador, valor.kill, valor.equipe)
+                        criarRankJogador.start(index + 1, valor.jogador, valor.kill, valor.equipe)
+                    })
+                    
+                }
+            }
+        }
+        
+    }
+    mudarSeason.start()
+   
+
 
 
 })()

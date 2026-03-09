@@ -280,3 +280,151 @@ body {
     color: #60A5FA;
     font-size: 1.8em !important;
 }
+
+
+
+/* --- TOP KILLS SECTION --- */
+.top_kills_wrapper {
+    margin-top: 5rem;
+    background-color: #0f172a;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+}
+
+.top_kills_header {
+    background-color: #166534;
+    /* Verde da imagem */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.top_kills_header h2 {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.top_kills_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas como na imagem */
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #020617;
+}
+
+/* Estilo Individual do Card */
+.kill_card {
+    background-color: #0b111e;
+    border: 2px solid #1e293b;
+    border-radius: 1.2rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.kill_card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+/* Badges de Rank (Círculos) */
+.badge {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 1rem;
+    border: 3px solid #020617;
+}
+
+/* Cores específicas para o Top 3 */
+.rank-1 {
+    border-color: #eab308;
+}
+
+.rank-1 .badge {
+    background-color: #eab308;
+}
+
+.rank-2 {
+    border-color: #9ca3af;
+}
+
+.rank-2 .badge {
+    background-color: #9ca3af;
+}
+
+.rank-3 {
+    border-color: #ea580c;
+}
+
+.rank-3 .badge {
+    background-color: #ea580c;
+}
+
+/* Informações do Jogador */
+.player_info {
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.player_info h4 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.player_info p {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Stats de Kills na Direita */
+.kill_stats {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.kill_stats .lbl {
+    font-size: 1rem;
+    color: #9ca3af;
+    font-weight: bold;
+}
+
+.kill_stats .num {
+    font-size: 2.8rem;
+    color: #4ade80;
+    /* Verde neon dos números */
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* Responsividade: Se a tela for pequena, vira 1 coluna */
+@media (max-width: 900px) {
+    .top_kills_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
