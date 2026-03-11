@@ -415,6 +415,63 @@ body {
     line-height: 1;
 }
 
+
+
+.footer{
+    background: linear-gradient(to right, #0A0D16, rgba(0, 0, 0, 0.63));
+    height: 10rem;
+    padding: 2rem;
+    border-top: 2px solid #13234F;
+    text-align: center;
+}
+
+.footer p{
+    color: #93C5FD;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.footer a:nth-child(1){
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    background: linear-gradient(to right, #db2777, #9333ea);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+}
+
+.footer a:nth-child(1) {
+    color: white;
+    font-size: 1.8em;
+    background: linear-gradient(to right, #db2777, #9333ea);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+}
+.footer a:nth-child(2) {
+    color: white;
+    font-size: 1.8em;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+}
+.footer a:nth-child(3) {
+    color: white;
+    font-size: 1.8em;
+    background-color: #2BD46A;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+}
+.links{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
 /* Responsividade: Se a tela for pequena, vira 1 coluna */
 @media (max-width: 900px) {
     .top_kills_grid {
