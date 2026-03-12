@@ -105,12 +105,12 @@
             { jogador: "gx7gás", kill: 9, equipe: "EQUIPE RUSSO 01" },
             {jogador: "BSK drago9", kill: 9, equipe: "BESERKERS"},
             { jogador: "EQP índio x6", kill: 9, equipe: "EQUIPE RUSSO 03" },          
+            { jogador: "Japonesa", kill: 9, equipe: "DE MANAUS" },  
             { jogador: "J6 kaio", kill: 8, equipe: "J6 ECELENY" },
             {jogador: "Rx nk7 ", kill: 8, equipe: "FANÁTICOS 01"},
             { jogador: "Rx nox", kill: 8, equipe: "FANÁTICOS 02" },
             { jogador: "EQP jv", kill: 8, equipe: "EQUIPE RUSSO 02" },
 
-            { jogador: "Japonesa", kill: 9, equipe: "DE MANAUS" },  
             
             { jogador: "Pedro Lk", kill: 7, equipe: "LK 02" },        
             { jogador: "BSK zeus", kill: 7, equipe: "BESERKERS" },
