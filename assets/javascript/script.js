@@ -19,7 +19,7 @@
             // { equipe: "", quedas: 5, abates: , booyah: , pts: },
         ],
         season2: [
-            { equipe: "aaa", quedas: 5, abates: 2, booyah: 1, pts: 1 },
+            // { equipe: "aaa", quedas: 5, abates: 2, booyah: 1, pts: 1 },
             {data: "15/11/2023"}
         ]
     }
@@ -77,9 +77,56 @@
             {jogador: "notrare",      kill: 0, equipe: "Trupe SKULL"},
         ],
         season2: [
-            {jogador: "nickAleatorio", kill: 5, equipe: "flamengo" },
-            {jogador: "nickAleatorio", kill: 10, equipe: "vasco"},
+            { jogador: "Wod whiskyst", kill: 25, equipe: "EQUIPE RUSSO 01" },
+            { jogador: "Rx ghost7wp", kill: 20, equipe: "FANÁTICOS 02" },
+            {jogador: "J6 psico ump", kill: 20, equipe: "J6 ECELENY"},
+            {jogador: "Rx rzin777", kill: 19, equipe: "FANÁTICOS 01"},
+            {jogador: "Lk felcada", kill: 18, equipe: "LK 02"},
+            {jogador: "Yyyyyyyk", kill: 18, equipe: "FANÁTICOS 01"},
+            {jogador: "EQP neo", kill: 15, equipe: "EQUIPE RUSSO 03"},
+            { jogador: "Lk Biel 051", kill: 14, equipe: "LK 01" },
+            { jogador: "Lk duzinn", kill: 14, equipe: "LK 01" },
+            {jogador: "Lk atirador", kill: 13, equipe: "LK 01"},
+            { jogador: "W7 mt07", kill: 13, equipe: "J6 ECELENY" },
+            { jogador: "J6 shadow", kill: 12, equipe: "J6 ECELENY" },
+            {jogador: "EQP Camargo", kill: 11, equipe: "EQUIPE RUSSO 01"},
+            {jogador: "BSK drago9", kill: 9, equipe: "BESERKERS"},
+            { jogador: "Lk novinho ", kill: 9, equipe: "LK 02" },
+            { jogador: "gx7gás", kill: 9, equipe: "EQUIPE RUSSO 01" },
+            { jogador: "EQP índio x6", kill:9, equipe: "EQUIPE RUSSO 03" },
+            { jogador: "Japonesa", kill: 8, equipe: "DE MANAUS" },
+            {jogador: "Rx nk7 ", kill: 8, equipe: "FANÁTICOS 01"},
+            { jogador: "Rx nox", kill: 8, equipe: "FANÁTICOS 02" },
+            { jogador: "J6 kaio", kill: 8, equipe: "J6 ECELENY" },
+            {jogador: "EQP jv", kill: 8, equipe: "EQUIPE RUSSO 02"},
+            { jogador: "BSK zeus", kill: 7, equipe: "BESERKERS" },
+            { jogador: "BSK doutor ", kill: 7, equipe: "BESERKERS 2.0" },
+            { jogador: "Pedro Lk", kill: 7, equipe: "LK 02" },        
+            { jogador: "Rn Gohan m590", kill: 6, equipe: "EQUIPE RUSSO 01" },
+            { jogador: "ven4nciio46_", kill: 6, equipe: "FANÁTICOS 01" },
+            {jogador: "EQP Iago x6", kill: 6, equipe: "EQUIPE RUSSO 02"},
+            {jogador: "EQP vm", kill: 5, equipe: "EQUIPE RUSSO 02" },
+            {jogador: "BSK GOAT 157", kill: 5, equipe: "BESERKERS" },
+            { jogador: "BSK kirito ", kill: 5, equipe: "BESERKERS 2.0" },
+            { jogador: "GHOST Tm ", kill: 5, equipe: "BESERKERS 2.0" },
+            { jogador: "Rxg Souza", kill: 5, equipe: "FANÁTICOS 02" },
+            {jogador: "BSK lwzin", kill: 4, equipe: "BESERKERS"},
+            { jogador: "Lk gordão", kill: 4, equipe: "LK 02" },
+            { jogador: "EQP kn", kill: 4, equipe: "EQUIPE RUSSO 03" },
+            { jogador: "Odio", kill: 3, equipe: "DE MANAUS" },
+            {jogador: "Lk general", kill: 3, equipe: "LK 01"},
+            { jogador: "Dm gs", kill: 3, equipe: "DE MANAUS" },
+            {jogador: "FX", kill: 2, equipe: "GHOST"},
+            { jogador: "_Luanazzk", kill: 2, equipe: "FANÁTICOS 02" },
+            { jogador: "Rx myamura", kill: 2, equipe: "FANÁTICOS 02" },
+            {jogador: "EQP Kaiozera", kill: 2, equipe: "EQUIPE RUSSO 02"},
+            { jogador: "Wking_v4", kill: 1, equipe: "BESERKERS 2.0" },       
+            { jogador: "Dm style", kill: 1, equipe: "DE MANAUS" },
+            {jogador: "Papai cris", kill: 0, equipe: "GHOST"},          
+            { jogador: "EQP merlin", kill: 0, equipe: "EQUIPE RUSSO 03" },
+            { jogador: "Yyyyyyyi", kill: 0, equipe: "FANÁTICOS 01" },                     
             // {jogador: "", kill: , equipe: ""},
+
         ]
     }
     
@@ -299,7 +346,11 @@
         carregarAutomatico(selecioneSeason) {
             const equipes = seasons.season1
             equipes.forEach((valor, index) => {
-                        
+                if (!valor.equipe) {
+                        const spanData = document.querySelector("#data")
+                        spanData.innerHTML = valor.data
+                        return
+                }
                 new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, valor.data, "season 1")
 
             });
