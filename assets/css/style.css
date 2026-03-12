@@ -8,11 +8,11 @@
 html {
   font-size: 62.5%;
   /* 1rem = 10px */
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
-  height: 100%;
+  min-height: 100vh;
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   /* Fonte mais moderna */
   background: radial-gradient(circle at center, #0F2B55 0%, #0B1E3A 40%, #070C18 100%);
@@ -35,6 +35,7 @@ body {
   border-bottom: 1px solid #1e293b;
   position: sticky;
   top: 0;
+  z-index: 99;
 }
 .header .header_container {
   display: flex;
