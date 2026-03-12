@@ -109,13 +109,16 @@
             {jogador: "Rx nk7 ", kill: 8, equipe: "FANÁTICOS 01"},
             { jogador: "Rx nox", kill: 8, equipe: "FANÁTICOS 02" },
             { jogador: "EQP jv", kill: 8, equipe: "EQUIPE RUSSO 02" },
-            { jogador: "Japonesa", kill: 8, equipe: "DE MANAUS" },       
+
+            { jogador: "Japonesa", kill: 9, equipe: "DE MANAUS" },  
+            
             { jogador: "Pedro Lk", kill: 7, equipe: "LK 02" },        
             { jogador: "BSK zeus", kill: 7, equipe: "BESERKERS" },
             { jogador: "BSK doutor ", kill: 7, equipe: "BESERKERS 2.0" },
             { jogador: "ven4nciio46_", kill: 6, equipe: "FANÁTICOS 01" },
             { jogador: "Rn Gohan m590", kill: 6, equipe: "EQUIPE RUSSO 01" },
             { jogador: "EQP Iago x6", kill: 6, equipe: "EQUIPE RUSSO 02" },            
+            { jogador: "Odio", kill: 6, equipe: "DE MANAUS" },
             { jogador: "Rxg Souza", kill: 5, equipe: "FANÁTICOS 02" },
             {jogador: "BSK GOAT 157", kill: 5, equipe: "BESERKERS" },
             {jogador: "EQP vm", kill: 5, equipe: "EQUIPE RUSSO 02" },
@@ -124,15 +127,18 @@
             { jogador: "Lk gordão", kill: 4, equipe: "LK 02" },
             {jogador: "BSK lwzin", kill: 4, equipe: "BESERKERS"},
             { jogador: "EQP kn", kill: 4, equipe: "EQUIPE RUSSO 03" },
-            {jogador: "Lk general", kill: 3, equipe: "LK 01"},
-            { jogador: "Odio", kill: 3, equipe: "DE MANAUS" },
-            { jogador: "Dm gs", kill: 3, equipe: "DE MANAUS" },
+            { jogador: "Dm gs", kill: 4, equipe: "DE MANAUS" },
+            { jogador: "Lk general", kill: 3, equipe: "LK 01" },
+            
+
             { jogador: "_Luanazzk", kill: 2, equipe: "FANÁTICOS 02" },
             { jogador: "Rx myamura", kill: 2, equipe: "FANÁTICOS 02" },
             { jogador: "EQP Kaiozera", kill: 2, equipe: "EQUIPE RUSSO 02" },
+            { jogador: "Dm style", kill: 2, equipe: "DE MANAUS" },
             {jogador: "FX", kill: 2, equipe: "GHOST"},
-            { jogador: "Wking_v4", kill: 1, equipe: "BESERKERS 2.0" },       
-            { jogador: "Dm style", kill: 1, equipe: "DE MANAUS" },
+            { jogador: "Wking_v4", kill: 1, equipe: "BESERKERS 2.0" }, 
+            
+
             { jogador: "Yyyyyyyi", kill: 0, equipe: "FANÁTICOS 01" },                     
             { jogador: "EQP merlin", kill: 0, equipe: "EQUIPE RUSSO 03" },
             {jogador: "Papai cris", kill: 0, equipe: "GHOST"},          
