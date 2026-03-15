@@ -1,0 +1,39 @@
+{
+    "season1": {
+        "data": "09/03/2026",
+        "equipes":[
+            { "equipe": "LK 01", "quedas": 5, "abates": 63, "booyah": 1, "pts": 106},
+            { "equipe": "Equipe Russo 03", "quedas": 5, "abates": 30, "booyah": 0, "pts": 83},
+            { "equipe": "Equipe Russo 02", "quedas": 5, "abates": 47, "booyah": 1, "pts": 74 },
+            { "equipe": "Team Fluxo", "quedas": 5, "abates": 35, "booyah": 1, "pts": 62},
+            { "equipe": "LK 02", "quedas": 5, "abates": 29, "booyah": 1, "pts": 61},
+            { "equipe": "Equipe Russo 01", "quedas": 5, "abates": 29, "booyah": 1, "pts": 57},
+            { "equipe": "Beserkers", "quedas": 5, "abates": 24, "booyah": 0, "pts":49},
+            { "equipe": "Not Mobile", "quedas": 5, "abates": 18, "booyah": 0, "pts": 36},
+            { "equipe": "Beserkers 2.0", "quedas": 5, "abates": 12, "booyah": 0, "pts":29},
+            { "equipe": "Ghost", "quedas": 5, "abates": 13, "booyah": 0, "pts": 23},
+            { "equipe": "De Manaus", "quedas": 5, "abates": 9, "booyah": 0, "pts": 21},
+            { "equipe": "Trupe Skull", "quedas": 5, "abates": 0, "booyah": 0, "pts": 2}
+        ]
+    }, 
+    "season2": {
+        "data": "15/11/2023",
+        "equipes":[
+            { "equipe": "J6 Eceleny", "quedas": 5, "abates": 53, "booyah": 1, "pts": 91},
+            { "equipe": "Fanaticos 01", "quedas": 5, "abates": 51, "booyah": 1, "pts": 83},
+            { "equipe": "Lk 02", "quedas": 5, "abates": 38, "booyah": 2, "pts": 79},
+            { "equipe": "Lk 01", "quedas": 5, "abates": 44, "booyah": 0, "pts":79},
+            { "equipe": "Equipe Russo 01", "quedas": 5, "abates": 51, "booyah": 0, "pts": 77},
+            { "equipe": "Fanaticos 02", "quedas": 5, "abates": 38, "booyah": 0, "pts": 61},
+            { "equipe": "Beserkers", "quedas": 5, "abates": 26, "booyah": 1, "pts": 55},
+            { "equipe": "Equipe Russo 03", "quedas": 5, "abates": 29, "booyah": 0, "pts": 53},
+            { "equipe": "Equipe Russo 02", "quedas": 5, "abates": 21, "booyah": 0, "pts": 35},
+            { "equipe": "De Manaus", "quedas": 5, "abates": 21, "booyah": 0, "pts": 33},
+            { "equipe": "Beserkers 2.0", "quedas": 5, "abates": 18, "booyah": 0, "pts": 27},
+            { "equipe": "Ghost", "quedas": 5, "abates": 4, "booyah": 0, "pts": 6}
+        ]
+    }
+            
+            
+        
+}
