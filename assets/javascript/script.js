@@ -24,6 +24,107 @@
 
 
 
+    //chama as fuções quando muda la no select e carrega a season1 automatico
+    const mudarSeason = {
+        start() {
+            const select = document.querySelector(".container_select")
+
+            mudarSeason.carregarAutomatico(select.value)
+
+
+            select.addEventListener("change", function() {
+                const seasonEscolhida = this.value
+                mudarSeason.carregarSeason(seasonEscolhida)
+                mudarSeason.carregarRankJogador(seasonEscolhida)
+            })
+        },
+        carregarSeason(nomeSeason) {
+            if (nomeSeason != "selecioneSeason") {
+                const tbody = document.querySelector("#tbody")
+                tbody.innerHTML = ""
+            }
+
+            for (let season in seasons) {
+                if (nomeSeason == season) {
+                    const equipes = seasons[nomeSeason].equipes
+                    
+                    const data = seasons[nomeSeason].data
+                    
+                    
+                    equipes.forEach((valor, index) => {
+
+                        new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, data, nomeSeason)
+
+                    });
+
+                }
+            }
+        },
+        carregarRankJogador(nomeSeason) {
+            if (nomeSeason != "selecioneSeason") {
+                
+                const top_kills_grid = document.querySelector(".top_kills_grid")
+                top_kills_grid.innerHTML = ""
+                
+            }
+
+            for (let season in jogadores) {
+                if (nomeSeason == season) {
+                    const objJogadores = jogadores[nomeSeason].jogadores
+
+                    const equipes = seasons[nomeSeason].equipes
+                    const posicaoEquipe = {}
+                    equipes.forEach((time, index) => {
+                         posicaoEquipe[time.equipe] = index + 1
+                    })
+
+                    
+                    //vai colocar em ordem decrescente nas kills
+                    objJogadores.sort((a, b) => {
+                        
+                        
+                    // critério 1 → kills (maior primeiro)
+                    if (b.kill !== a.kill){
+                        return b.kill - a.kill
+                    }
+
+                    // critério 2 → posição da equipe (menor primeiro)
+                    console.log(posicaoEquipe[a.equipe] - posicaoEquipe[b.equipe])
+                    return posicaoEquipe[a.equipe] - posicaoEquipe[b.equipe]
+                    })
+                        
+
+                    objJogadores.forEach((valor, index) => {
+                        // new Jogador(index + 1, valor.jogador, valor.kill, valor.equipe)
+                        criarRankJogador.start(index + 1, valor.jogador, valor.kill, valor.equipe)
+                    })
+                    
+                }
+            }
+        },
+        carregarAutomatico(selecioneSeason) {
+            const equipes = seasons.season1.equipes
+            const data = seasons.season1.data
+            equipes.forEach((valor, index) => {
+                
+                new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, data, "season 1")
+
+            });
+
+
+            
+                
+                const objJogadores = jogadores.season1.jogadores
+                objJogadores.sort((a, b) => b.kill - a.kill)
+                objJogadores.forEach((valor, index) => {
+                    // new Jogador(index + 1, valor.jogador, valor.kill, valor.equipe)
+                    criarRankJogador.start(index + 1, valor.jogador, valor.kill, valor.equipe)
+                })
+                    
+            
+        }
+        
+    }
 
 
     class Equipe{
@@ -109,13 +210,13 @@
     }   
     
 
-    class Jogador{
-        constructor(posição, nomeJogador, equipe) {
-            this.posição = posição
-            this.nomeJogador = nomeJogador
-            this.equipe = equipe
-        }
-    }
+    // class Jogador{
+    //     constructor(posição, nomeJogador, equipe) {
+    //         this.posição = posição
+    //         this.nomeJogador = nomeJogador
+    //         this.equipe = equipe
+    //     }
+    // }
     const criarRankJogador = {
         start(posicao, nomeJogador, kill, equipe) {
             this.criaContainerJogador(posicao, nomeJogador, kill, equipe)
@@ -176,112 +277,7 @@
     }
 
 
-    //chama as fuções quando muda la no select e carrega a season1 automatico
-    const mudarSeason = {
-        start() {
-            const select = document.querySelector(".container_select")
-
-            mudarSeason.carregarAutomatico(select.value)
-
-
-            select.addEventListener("change", function() {
-                const seasonEscolhida = this.value
-                mudarSeason.carregarSeason(seasonEscolhida)
-                mudarSeason.carregarRankJogador(seasonEscolhida)
-            })
-        },
-        carregarSeason(nomeSeason) {
-            if (nomeSeason != "selecioneSeason") {
-                const tbody = document.querySelector("#tbody")
-                tbody.innerHTML = ""
-                
-            }
-
-            for (let season in seasons) {
-                if (nomeSeason == season) {
-                    const equipes = seasons[nomeSeason].equipes
-                    
-                    const data = seasons[nomeSeason].data
-                    
-                    
-                    equipes.forEach((valor, index) => {
-
-                        new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, data, nomeSeason)
-
-                    });
-
-                }
-            }
-        },
-        carregarRankJogador(nomeSeason) {
-            if (nomeSeason != "selecioneSeason") {
-                
-                const top_kills_grid = document.querySelector(".top_kills_grid")
-                top_kills_grid.innerHTML = ""
-                
-            }
-
-            for (let season in jogadores) {
-                if (nomeSeason == season) {
-                    const objJogadores = jogadores[nomeSeason].jogadores
-
-                    const equipes = seasons[nomeSeason].equipes
-                    const posicaoEquipe = {}
-                    equipes.forEach((time, index) => {
-                         posicaoEquipe[time.equipe] = index + 1
-                    })
-
-
-                    console.log(objJogadores)
-                    console.log(posicaoEquipe)
-                    
-                    //vai colocar em ordem decrescente nas kills
-                    objJogadores.sort((a, b) => {
-                        console.log(a.equipe, posicaoEquipe[a.equipe])
-                        console.log(b.equipe, posicaoEquipe[b.equipe])
-                        
-                    // critério 1 → kills (maior primeiro)
-                    if (b.kill !== a.kill){
-                        return b.kill - a.kill
-                    }
-
-                    // critério 2 → posição da equipe (menor primeiro)
-                    console.log(posicaoEquipe[a.equipe] - posicaoEquipe[b.equipe])
-                    return posicaoEquipe[a.equipe] - posicaoEquipe[b.equipe]
-                    })
-                        
-
-                    objJogadores.forEach((valor, index) => {
-                        new Jogador(index + 1, valor.jogador, valor.kill, valor.equipe)
-                        criarRankJogador.start(index + 1, valor.jogador, valor.kill, valor.equipe)
-                    })
-                    
-                }
-            }
-        },
-        carregarAutomatico(selecioneSeason) {
-            const equipes = seasons.season1.equipes
-            const data = seasons.season1.data
-            equipes.forEach((valor, index) => {
-                
-                new Equipe(index + 1, valor.equipe, valor.quedas, valor.abates, valor.booyah, valor.pts, data, "season 1")
-
-            });
-
-
-            
-                
-                const objJogadores = jogadores.season1.jogadores
-                objJogadores.sort((a, b) => b.kill - a.kill)
-                objJogadores.forEach((valor, index) => {
-                    new Jogador(index + 1, valor.jogador, valor.kill, valor.equipe)
-                    criarRankJogador.start(index + 1, valor.jogador, valor.kill, valor.equipe)
-                })
-                    
-            
-        }
-        
-    }
+    
    
 
 
