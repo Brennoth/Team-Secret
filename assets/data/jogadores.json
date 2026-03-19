@@ -106,5 +106,73 @@
       { "jogador": "Papai cris", "kill": 0, "equipe": "Ghost" },
       { "jogador": "Wod whiskyst", "kill": 25, "equipe": "Equipe Russo 01" }
     ]
+  },
+  "season3":{
+    "data": "15/11/2023",
+    "jogadores": [
+      { "jogador": "FM7 Noxx.MVP", "kill": 19, "equipe": "Hazard FM7" },
+      { "jogador": "FM7 SANTOSX7", "kill": 18, "equipe": "Hazard FM7" },
+      { "jogador": "LZX David_x7", "kill": 12, "equipe": "Hazard FM7" },
+      { "jogador": "LZX Kzk!ng", "kill": 10, "equipe": "Hazard FM7" },
+      
+      { "jogador": "silvawzk7", "kill": 8, "equipe": "Equipe Russo 01" },
+      { "jogador": "EQP DETROKZ", "kill": 19, "equipe": "Equipe Russo 01" },
+      { "jogador": "EQP CAMARGO", "kill": 11, "equipe": "Equipe Russo 01" },
+      { "jogador": "WOD WHISKYXT", "kill": 20, "equipe": "Equipe Russo 01" },
+
+      { "jogador": "RD VENOX", "kill": 0, "equipe": "Night Raid" },
+      { "jogador": "RD ruannn 7", "kill": 7, "equipe": "Night Raid" },
+      { "jogador": "TS thzz", "kill": 2, "equipe": "Night Raid" },
+      { "jogador": "@marqu1n", "kill": 1, "equipe": "Night Raid" },
+
+      { "jogador": "CHEF-adecio", "kill": 3, "equipe": "Equipe Russo 02" },
+      { "jogador": "W7 MT07", "kill":2 , "equipe": "Equipe Russo 02" },
+      { "jogador": "EQP indioX6", "kill": 6, "equipe": "Equipe Russo 02" },
+      { "jogador": "EQP chelly", "kill": 34, "equipe": "Equipe Russo 02" },
+
+      { "jogador": "HS-10.dnx", "kill": 3, "equipe": "Not Móbile" },
+      { "jogador": "gaab loko", "kill": 4, "equipe": "Not Móbile" },
+      { "jogador": "BOTECO", "kill": 4, "equipe": "Not Móbile" },
+      { "jogador": "anthony", "kill": 5, "equipe": "Not Móbile" },
+
+      { "jogador": "Ghost", "kill": 2, "equipe": "Beserkers 2.0" },
+      { "jogador": "BK KIRITO", "kill": 3, "equipe": "Beserkers 2.0" },
+      { "jogador": "@wking_v4", "kill": 1, "equipe": "Beserkers 2.0" },
+      { "jogador": "BK Lwzin", "kill": 5, "equipe": "Beserkers 2.0" },
+
+      { "jogador": "LK duzinn$$", "kill": 2, "equipe": "LK 01" },
+      { "jogador": "匚卂ㄥ丨千ㄥㄖ尺", "kill": 8, "equipe": "LK 01" },
+      { "jogador": "Gui", "kill": 4, "equipe": "LK 01" },
+      { "jogador": "(LK)FANTASMA", "kill": 1, "equipe": "LK 01" },
+
+      { "jogador": "EQP Sainttz7", "kill": 6, "equipe": "line Ifood" },
+      { "jogador": "EQP VM", "kill": 2, "equipe": "line Ifood" },
+      { "jogador": "EQP iagox6", "kill": 3, "equipe": "line Ifood" },
+      { "jogador": "EQP KAIOZERA", "kill": 1, "equipe": "line Ifood" },
+
+      { "jogador": "BK DRAGO9", "kill": 2, "equipe": "Beserkers" },
+      { "jogador": "BK CAOS", "kill": 1, "equipe": "Beserkers" },
+      { "jogador": "BK Goat157", "kill": 7, "equipe": "Beserkers" },
+      { "jogador": "BK ZEUS", "kill": 2, "equipe": "Beserkers" },
+      
+      { "jogador": "LK-M(a)L.", "kill": 4, "equipe": "LK 02" },
+      { "jogador": "LK-FELCADA", "kill": 9, "equipe": "LK 02" },
+      { "jogador": "LK_novinho", "kill": 9, "equipe": "LK 02" },
+      { "jogador": "LK GORDÃO", "kill": 3, "equipe": "LK 02" },
+      { "jogador": "Lk Biel 051", "kill": 1, "equipe": "LK 02" },
+
+      { "jogador": "FX_Itachi", "kill": 0, "equipe": "Team Fluxo" },
+      { "jogador": "espanca mob", "kill": 1, "equipe": "Team Fluxo" },
+      { "jogador": "bk_r4flm1v2", "kill": 1, "equipe": "Team Fluxo" },
+      { "jogador": "LDR t'soca", "kill": 1, "equipe": "Team Fluxo" },
+
+      { "jogador": "Neo", "kill": 0, "equipe": "QLS" },
+      { "jogador": "I'm raxor", "kill": 0, "equipe": "QLS" },
+      { "jogador": "@ShoxzZ xp", "kill": 0, "equipe": "QLS" },
+      { "jogador": "gbpurokkj7", "kill": 0, "equipe": "QLS" }
+
+
+    ]
   }
+  
 }

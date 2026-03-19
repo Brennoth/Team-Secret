@@ -1,7 +1,8 @@
 
 (function () {
     
-
+    // { "jogador": "", "kill": , "equipe": "" },
+    // { "equipe": "", "quedas": 5, "abates": , "booyah": , "pts": },
     let seasons
     let jogadores
     

@@ -32,6 +32,24 @@
             { "equipe": "Beserkers 2.0", "quedas": 5, "abates": 18, "booyah": 0, "pts": 27},
             { "equipe": "Ghost", "quedas": 5, "abates": 4, "booyah": 0, "pts": 6}
         ]
+    },
+    "season3": {
+        "data": "16/11/2023",
+        "equipes":[
+            { "equipe": "Hazard FM7", "quedas": 5, "abates": 59, "booyah": 4, "pts": 116},
+            { "equipe": "Equipe Russo 01", "quedas": 5, "abates": 58, "booyah": 0, "pts": 89},
+            { "equipe": "Equipe Russo 02", "quedas": 5, "abates": 48, "booyah": 1, "pts": 84},
+            { "equipe": "Lk 02", "quedas": 5, "abates": 26, "booyah": 0, "pts": 53},
+            { "equipe": "LK 01", "quedas": 5, "abates": 17, "booyah": 0, "pts": 45},
+            { "equipe": "Beserkers", "quedas": 5, "abates": 13, "booyah": 0, "pts": 40},
+            { "equipe": "Not Mobile", "quedas": 5, "abates": 16, "booyah": 0, "pts": 38},
+            { "equipe": "Beserkers 2.0", "quedas": 5, "abates": 10, "booyah": 0, "pts": 26},
+            { "equipe": "Night Raid", "quedas": 5, "abates": 10, "booyah": 0, "pts": 22},
+            { "equipe": "Line Ifood", "quedas": 5, "abates": 9, "booyah": 0, "pts": 17},
+            { "equipe": "Team Fluxo", "quedas": 5, "abates": 3, "booyah": 0, "pts": 15},
+            { "equipe": "QLS", "quedas": 5, "abates": 0, "booyah": 0, "pts": 0}
+            
+        ]
     }
             
             
