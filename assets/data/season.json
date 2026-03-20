@@ -50,6 +50,13 @@
             { "equipe": "QLS", "quedas": 5, "abates": 0, "booyah": 0, "pts": 0}
             
         ]
+    },
+     "season4": {
+        "data": "18/11/2023",
+        "equipes":[
+            { "equipe": "", "quedas": 5, "abates": 0, "booyah": 0, "pts": 0}
+            
+        ]
     }
             
             
