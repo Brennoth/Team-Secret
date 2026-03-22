@@ -118,6 +118,7 @@ body {
         margin-bottom: 2rem;
         position: absolute;
         opacity: 0;
+        clip-path: inset(100%);
         transition: all 0.3s ease-in-out;
         .scoring-system_pontosColocação{
             flex: 1;
