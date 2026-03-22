@@ -54,7 +54,18 @@
      "season4": {
         "data": "18/11/2023",
         "equipes":[
-            { "equipe": "", "quedas": 5, "abates": 0, "booyah": 0, "pts": 0}
+            { "equipe": "Hazard FM7", "quedas": 5, "abates": 92, "booyah": 3, "pts": 143},
+            { "equipe": "LK 02", "quedas": 5, "abates": 45, "booyah": 1, "pts": 82},
+            { "equipe": "Not Mobile", "quedas": 5, "abates": 31, "booyah": 1, "pts": 74},
+            { "equipe": "Equipe Russo 02", "quedas": 5, "abates": 34, "booyah": 0, "pts": 59},
+            { "equipe": "TPK E-Sport", "quedas": 5, "abates": 21, "booyah": 0, "pts": 55},
+            { "equipe": "Trupe Skull", "quedas": 5, "abates": 29, "booyah": 0, "pts": 53},
+            { "equipe": "LK 03", "quedas": 5, "abates": 22, "booyah": 0, "pts": 48},
+            { "equipe": "LK 01", "quedas": 5, "abates": 25, "booyah": 0, "pts": 45},
+            { "equipe": "Night Raid", "quedas": 5, "abates": 4, "booyah": 0, "pts": 15},
+            { "equipe": "Beserkers", "quedas": 5, "abates": 1, "booyah": 0, "pts": 11},
+            { "equipe": "Equipe Russo 01", "quedas": 5, "abates": 0, "booyah": 0, "pts": 0},
+            { "equipe": "De Manaus", "quedas": 5, "abates": 0, "booyah": 0, "pts": 0}
             
         ]
     }
