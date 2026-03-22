@@ -91,6 +91,7 @@ body {
   opacity: 100 !important;
   margin-top: 0 !important;
   transition: all 0.3s ease-in-out;
+  clip-path: inset(0%) !important;
 }
 .container .scoring-system {
   background: linear-gradient(to bottom right, #171f2e, #000000);
