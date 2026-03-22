@@ -10,6 +10,9 @@
         const btnScoringSystem = document.querySelector(".btn-scoring-system")
         btnScoringSystem.classList.toggle("juntar")
 
+        const btnScoringSystemSpan = document.querySelector(".btn-scoring-system span")
+        btnScoringSystemSpan.classList.toggle("grau180")
+
         
     })
 

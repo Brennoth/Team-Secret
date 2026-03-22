@@ -79,6 +79,10 @@ body {
   border-radius: 2rem;
   transition: all 0.3s ease-in-out;
 }
+.container .grau180 {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
 .container .juntar {
   border-radius: 2rem 2rem 0 0;
 }
@@ -87,24 +91,20 @@ body {
   cursor: pointer;
 }
 .container .ativo {
-  position: relative !important;
-  opacity: 100 !important;
-  margin-top: 0 !important;
   transition: all 0.3s ease-in-out;
-  clip-path: inset(0%) !important;
+  padding: 2rem;
+  border: 1px solid rgba(125, 72, 15, 0.5019607843);
+  height: auto !important;
 }
 .container .scoring-system {
   background: linear-gradient(to bottom right, #171f2e, #000000);
-  padding: 2rem;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  border: 1px solid rgba(125, 72, 15, 0.5019607843);
   border-radius: 0 0 2rem 2rem;
   margin-bottom: 2rem;
-  position: absolute;
-  opacity: 0;
-  clip-path: inset(100%);
+  height: 0;
+  overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
 .container .scoring-system .scoring-system_pontosColocação {
