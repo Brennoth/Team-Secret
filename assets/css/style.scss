@@ -23,6 +23,8 @@ body {
     margin: 0 auto;
 }
 
+
+
 /* --- HEADER --- */
 .header {
     display: flex;
@@ -75,6 +77,146 @@ body {
 .container {
     padding: 4rem 2rem;
 
+
+    //sistema de pontuação
+    .btn-scoring-system{
+        background-color: #7C4710;
+        border: none;
+        padding: 2rem;
+        width: 100%;
+        color: white;
+        font-size: 3em;
+        text-align: left;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 2rem;
+        // border-start-start-radius: 2rem;
+        transition: all 0.3s ease-in-out;
+    }
+    .juntar{
+        border-radius: 2rem 2rem 0 0;
+    }
+    .btn-scoring-system:hover{
+        background-color: #975b1a;
+        cursor: pointer;
+    }
+    .ativo{
+        position: relative !important;
+        opacity: 100 !important;
+        margin-top: 0 !important;
+        transition: all 0.3s ease-in-out;
+    }
+    .scoring-system{
+        background: linear-gradient(to bottom right, #171f2e, #000000);
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        border: 1px solid #7d480f80;
+        border-radius: 0 0 2rem 2rem;
+        margin-bottom: 2rem;
+        position: absolute;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        .scoring-system_pontosColocação{
+            flex: 1;
+        }
+        .scoring-system_pontosColocação h1{
+            color: #FACC15;
+            font-size: 2.2em;
+            margin-bottom: 2rem;
+        }
+        .scoring-system_pontosColocação > ul{
+            list-style: none;
+        }
+        .scoring-system_pontosColocação > ul > li{
+            display: flex;
+            justify-content: space-between;
+            background-color: #161D29;
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.199);
+        }
+        .scoring-system_pontosColocação > ul > li > span{
+            color: #FACC15;
+            font-size: 2.2rem;
+        }
+        .scoring-system_kill{
+            flex: 1;
+            .scoring-system_kill_title{
+                color: #42C672;
+                font-size: 2em;
+                margin-bottom: 1rem;
+            }
+            .scoring-system_kill_kills{
+                background-color: #0B1E1A;
+                border: 1px solid #0E5D2F;
+                padding: 3rem;
+                text-align: center;
+                border-radius: 2rem;
+            }
+            .scoring-system_kill_kills h2{
+                color: #42C672;
+                font-weight: bolder;
+                font-size: 4em;   
+            }
+            .scoring-system_kill_kills p:nth-child(2){
+                font-size: 2em;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+            .scoring-system_kill_kills p:nth-child(3){
+                font-size: 1.6em;
+                color: rgba(255, 255, 255, 0.363);
+            }
+            
+        }
+        .scoring-system_kill_exemplo{
+            background-color: #0A1226;
+            border: 1px solid #132F7D;
+            padding: 2rem;
+            border-radius: 2rem;
+            margin-top: 2rem;
+        }
+        .scoring-system_kill_exemplo  h2{
+            color: #60A5FA;
+            font-size: 2em;
+            font-weight: bolder;
+        }
+        .scoring-system_kill_exemplo p:nth-child(2), .scoring-system_kill_exemplo p:nth-child(3){
+            color: rgba(255, 255, 255, 0.356);
+            font-size: 1.6em;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        .scoring-system_kill_exemplo p:nth-child(2) > span, .scoring-system_kill_exemplo p:nth-child(3)>span{
+            color: white;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+        .scoring-system_kill_exemplo p:nth-child(4){
+            color: #60A5FA;
+            border-top: 1px solid #60a5fa6e;
+            font-size: 1.8em;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .scoring-system_kill_exemplo p:nth-child(4) > span{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+    
+
+
+    //selecionar as seasons
     .container_controls {
         margin-bottom: 3rem;
 
@@ -82,6 +224,7 @@ body {
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
+            margin-top: 2rem;
         }
         .container_title {
             color: #9CA3AF;
@@ -507,6 +650,9 @@ body {
 @media (max-width: 900px) {
     .top_kills_grid {
         grid-template-columns: 1fr;
+    }
+    .scoring-system{
+        flex-direction: column;
     }
 }
 

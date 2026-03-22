@@ -40,6 +40,60 @@
     <main class="largura-definida">
         
         <section class="container">
+            <!-- ▲ -->
+
+            <!--SISTEMA DE PONTUAÇÃO-->
+            <button class="btn-scoring-system">📊 Sistema de Pontuação   <span>▼</span></button>
+            <div class="scoring-system">
+
+                <div class="scoring-system_pontosColocação">
+                    <h1> 
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EAB308"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                <path d="M4 22h16" />
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                            </svg>
+                        </span> 
+                        Pontos por Colocação
+                    </h1>
+
+                    <ul>
+                        <li>🥇 Booyah (1º) <span>12 pts</span></li>
+                        <li>🥈 Top 2 <span>9 pts</span></li>
+                        <li>🥉 Top 3 <span>8 pts</span></li>
+                        <li>Top 4<span>7 pts</span></li>
+                        <li>Top 5<span>6 pts</span></li>
+                        <li>Top 6<span>5 pts</span></li>
+                        <li>Top 7<span>4 pts</span></li>
+                        <li>Top 8<span>3 pts</span></li>
+                        <li>Top 9<span>2 pts</span></li>
+                        <li>Top 10<span>1 pts</span></li>
+                        <li>Top 11-12<span>0 pts</span></li>
+                    </ul>
+                </div>
+
+                <div class="scoring-system_kill">
+                    <h1 class="scoring-system_kill_title">Pontos por Kills</h1>
+                    <div class="scoring-system_kill_kills">
+                        <h2>1</h2>
+                        <p>Ponto por Kill</p>
+                        <p>Cada abate conta 1 ponto para o total da equipe</p>
+                    </div>
+
+                    <div class="scoring-system_kill_exemplo">
+                        <h2>📝 Exemplo de Cálculo</h2>
+                        <p>1º Lugar (Booyah): <span>12 pts</span></p>
+                        <p>10 Kills: <span>10 pts</span></p>
+                        <p>Total: <span>22 pts</span></p>
+                    </div>
+                </div>
+            </div>
+            <!--SISTEMA DE PONTUAÇÃO-->
 
             <div class="container_controls">
                 <div class="select_group">
@@ -75,8 +129,6 @@
                 </table>
             </div>
             
-
-
             <div class="top_kills_wrapper">
                 <div class="top_kills_header">
                     <h2>🎯 TOP KILL - JOGADORES</h2>
@@ -101,7 +153,9 @@
 
         <p class="copyright">© 2024 X-Treino New Wizard | Ranking Free Fire</p>
     </footer>
+
     <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/btn-scoringSystem.js"></script>
 </body>
 
 </html>
